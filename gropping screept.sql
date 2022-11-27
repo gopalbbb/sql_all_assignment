@@ -1,0 +1,10 @@
+SELECT COUNT(*) FROM classicmodels.orderdetails;
+SELECT COUNT(addressLine2) FROM classicmodels.customers;
+SELECT country,COUNT(customerNumber) FROM classicmodels.customers group by country;
+SELECT SUM(quantityInStock) FROM classicmodels.products group by productline;
+SELECT COUNT(*) FROM classicmodels.customers;
+SELECT MAX(buyPrice) FROM classicmodels.products WHERE productLine = 'classic cars';
+SELECT MIN(buyPrice) FROM classicmodels.products WHERE productLine = 'truck and buses';
+SELECT customerNumber, country,concat('contactFirstName',' ','contactLastName')from classicmodels.customers;
+SELECT * FROM classicmodels.customers order by customerNumber DESC limit 1;
+SELECT * FROM classicmodels.customers order by contactFirstName limit 1;
